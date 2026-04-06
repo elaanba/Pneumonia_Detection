@@ -17,28 +17,18 @@ This Flask web app allows users to upload chest X-ray images and detect Pneumoni
 
 ### 1. Clone this Repository
 ```bash
-git clone https://github.com/elaanba/xray-diagnosis-app-1.git
+git clone https://github.com/elaanba/Pneumonia_Detection.git
 cd xray-diagnosis-app
 
-###### OR ############
-
-Set Up a Virtual Environment
-
-python -m venv venv
-source venv/bin/activate    # On Windows: venv\Scripts\activate
-
-Install Dependencies
 
 
-pip install -r requirements.txt
+Activate your Virtual Environment
 
+.\.venv\Scripts\activate.bat
 
 Run the Flask App
 
-python app.py
-
-
-
+& ".\.venv\Scripts\python.exe" "app.py"
 
 
 This app uses classification models that detect Pneumonia
