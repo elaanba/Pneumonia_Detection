@@ -16,9 +16,9 @@ import keras
 
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'static/uploads'
-app.config['MODEL_FOLDER'] = 'model'
-app.config['PNEUMONIA_FOLDER'] = 'Pneumonia'
+app.config['UPLOAD_FOLDER'] = '/'
+app.config['MODEL_FOLDER'] = '/'
+app.config['PNEUMONIA_FOLDER'] = '/'
 
 ##heatmap
 def get_img_array(img_path, size):
@@ -105,7 +105,7 @@ def crop_img(img, add_pixels_value=0):
 def welcome():
     return render_template('welcome.html')
 
-@app.route("/pneumonia", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def pneumonia():
     models = [f for f in os.listdir('pneumonia') if f.endswith('.tflite')]
     IMG_SIZE = (224, 224)
